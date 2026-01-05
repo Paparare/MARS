@@ -1,0 +1,92 @@
+{
+  "prompts": {
+    "zero_shot_cot": {
+      "template": "Solve this problem step by step.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your step-by-step work and explain your thinking process here]\n</reasoning>\n\n<answer>\n[Provide only the final answer here]\n</answer>",
+      "sampling_params": {
+        "temperature": 0,
+        "num_samples": 1
+      },
+      "description": "Zero-shot chain-of-thought with XML output format"
+    },
+    "zero_shot": {
+    "template": "Answer the following question.\n\nQuestion: {question}",
+    "sampling_params": {
+      "temperature": 0,
+      "num_samples": 1
+    },
+    "description": "Zero-shot direct answer with XML output format"
+    },
+
+    "zero_shot_self_consistency": {
+      "template": "Solve this problem step by step.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your step-by-step work and explain your thinking process here]\n</reasoning>\n\n<answer>\n[Provide only the final answer here]\n</answer>",
+      "sampling_params": {
+        "temperature": 0.7,
+        "num_samples": 5
+      },
+      "description": "Self-consistency with 5 samples and XML output format"
+    },
+
+    "zero_shot_self_consistency_10": {
+      "template": "Solve this problem step by step.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your step-by-step work and explain your thinking process here]\n</reasoning>\n\n<answer>\n[Provide only the final answer here]\n</answer>",
+      "sampling_params": {
+        "temperature": 0.7,
+        "num_samples": 10
+      },
+      "description": "Self-consistency with 10 samples and XML output format"
+    },
+
+    "self_refine": {
+      "template": "Solve this problem step by step.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your step-by-step work and explain your thinking process here]\n</reasoning>\n\n<answer>\n[Provide only the final answer here]\n</answer>",
+      "sampling_params": {
+        "temperature": 0,
+        "num_samples": 1
+      },
+      "description": "Self-refine with XML output format"
+    },
+
+    "few_shot_cot": {
+      "template": "Here are some examples of how to solve similar problems:\n\nExample 1:\nQuestion: If x + 3 = 7, what is x?\n<reasoning>\nTo find x, I need to isolate it on one side.\nSubtracting 3 from both sides: x + 3 - 3 = 7 - 3\nSimplifying: x = 4\n</reasoning>\n<answer>\n4\n</answer>\n\nNow solve this problem:\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your step-by-step work and explain your thinking process here]\n</reasoning>\n\n<answer>\n[Provide only the final answer here]\n</answer>",
+      "sampling_params": {
+        "temperature": 0,
+        "num_samples": 1
+      },
+      "description": "Few-shot chain-of-thought with XML output format"
+    },
+
+    "concise_enhanced": {
+      "template": "Solve this problem. Be concise but thorough.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your concise step-by-step work]\n</reasoning>\n\n<answer>\n[Final answer only]\n</answer>",
+      "sampling_params": {
+        "temperature": 0,
+        "num_samples": 1
+      },
+      "description": "Concise prompting with XML output format"
+    },
+
+    "specific_enhanced": {
+      "template": "Solve this problem. Pay special attention to the specific details and requirements in the question.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Show your detailed step-by-step work, addressing all specifics]\n</reasoning>\n\n<answer>\n[Provide the precise final answer]\n</answer>",
+      "sampling_params": {
+        "temperature": 0,
+        "num_samples": 1
+      },
+      "description": "Specific prompting emphasizing details with XML output format"
+    },
+
+    "reasoning_enhanced": {
+      "template": "Solve this problem using careful logical reasoning. Explain each step of your thinking process.\nQuestion: {question}\n\nProvide your response in the following format:\n\n<reasoning>\n[Explain your logical reasoning step by step. Show all intermediate steps and justify each decision.]\n</reasoning>\n\n<answer>\n[State your final answer clearly]\n</answer>",
+      "sampling_params": {
+        "temperature": 0,
+        "num_samples": 1
+      },
+      "description": "Reasoning-focused prompting with XML output format"
+    }
+  },
+
+  "model_settings": {
+    "default_model": "gpt-4o",
+    "evaluation_model": "o3-mini",
+    "max_tokens": 2000,
+    "timeout": 30
+  },
+
+  "description": "Baseline prompts with XML-style structured output format for benchmark testing. All prompts now include <reasoning> and <answer> tags for consistent parsing."
+}
