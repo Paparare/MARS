@@ -19,8 +19,8 @@ This repository contains code for:
 
 - **Three Enhancement Types**:
   - **Concise**: Quick warnings and key points
-  - **Specific**: Detailed guidance with verification steps
   - **Reasoning**: Minimal hints for self-discovery
+  - **Concise + Reasoning (Specific)**: Detailed guidance with verification steps
 
 - **Robust Infrastructure**:
   - Checkpointing for resumable runs
