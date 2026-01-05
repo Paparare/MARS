@@ -1,6 +1,6 @@
 # Prompt Enhancement Benchmark Framework
 
-A comprehensive framework for evaluating and enhancing LLM prompting strategies on the GPQA (Graduate-Level Google-Proof Q&A) benchmark.
+A code example for evaluating and enhancing LLM prompting strategies on the GPQA (Graduate-Level Google-Proof Q&A) benchmark.
 
 ## Overview
 
